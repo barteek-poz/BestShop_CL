@@ -12,34 +12,227 @@
     <title>BestShop</title>
   </head>
   <body>
-    <div class="main">
+    <div class="page-container">
+      <!-- HEADER -->
       <header class="header">
         <nav class="header-nav">
-            <div class="nav-content container">
-                <a href="#" class="nav-logo">BestShop</a>
-          <ul class="nav-menu">
-            <li>
-              <a class="nav-menu-link" href="#about">Why us</a>
-            </li>
-            <li>
-              <a class="nav-menu-link" href="#benefits">Benefits</a>
-            </li>
-            <li>
-              <a class="nav-menu-link" href="#prices">Prices</a>
-            </li>
-            <li>
-              <a class="nav-menu-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-            </div>
-          
+          <div class="nav-content container">
+            <a href="#" class="nav-logo">BestShop</a>
+            <ul class="nav-menu">
+              <li>
+                <a class="nav-menu-link" href="#about">Why us</a>
+              </li>
+              <li>
+                <a class="nav-menu-link" href="#benefits">Benefits</a>
+              </li>
+              <li>
+                <a class="nav-menu-link" href="#prices">Prices</a>
+              </li>
+              <li>
+                <a class="nav-menu-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
         </nav>
-        <div class="hero">
-          <h1 class="hero-header">Sell More!</h1>
-          <p class="hero-paragraph">Open shop on our platform and increase your sales</p>
-          <button class="hero-btn">Open your shop</button>
-        </div>
       </header>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1 class="hero-header">Sell More!</h1>
+          <p class="hero-paragraph">
+            Open shop on our platform and increase your sales
+          </p>
+          <a class="hero-btn btn" href="#">Open your shop</a>
+        </div>
+        <img class="hero-img" src="./assets/Background.png" alt="opening-img" />
+      </section>
+      <!-- STATISTICS -->
+      <section class="stats container">
+        <h2 class="stats-header">The most popular sales platform in country</h2>
+        <div class="stats-columns">
+          <div class="stats-info">
+            <div class="stats-info-img img--1"></div>
+            <span class="stats-info-bold" class="">100000+</span>
+            <p class="stats-info-text">daily entries</p>
+          </div>
+          <div class="stats-info">
+            <div class="stats-info-img img--2"></div>
+            <span class="stats-info-bold" class="">2000000+</span>
+            <p class="stats-info-text">seen products every day</p>
+          </div>
+          <div class="stats-info">
+            <div class="stats-info-img img--3"></div>
+            <span class="stats-info-bold" class="">10000+</span>
+            <p class="stats-info-text">added posts daily</p>
+          </div>
+        </div>
+      </section>
+      <!-- BENEFITS -->
+      <section class="benefits">
+        <div class="benefits-content container">
+          <div class="benefit benefit--1">
+            <div class="benefit-text">
+              <h2 class="benefit-header">Be always first</h2>
+              <p class="benefit-paragraph benefit-paragraph--1">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam.
+              </p>
+            </div>
+            <div class="benefit-img benefit-img--1">
+              <img src="./assets/Macbook.png" alt="macbook" />
+            </div>
+          </div>
+
+          <div class="benefit benefit--2">
+            <div class="benefit-img benefit-img--2">
+              <img src="./assets/iPhone.png" alt="iphone" />
+            </div>
+            <div class="benefit-text benefit-text--2">
+              <h2 class="benefit-header">Your shop is where you are!</h2>
+              <p class="benefit-paragraph benefit-paragraph--2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam.
+              </p>
+            </div>
+          </div>
+          <div class="benefit benefit--3">
+            <div class="benefit-text">
+              <h2 class="benefit-header">Increase recognition your brand!</h2>
+              <p class="benefit-paragraph benefit-paragraph--3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam.
+              </p>
+            </div>
+            <div class="benefit-img benefit-img--3">
+              <img src="./assets/Trumpet.png" alt="trumpet" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- PRICING -->
+      <section class="pricing">
+        <h2 class="pricing-header">Pricing</h2>
+        <div class="pricing-columns container">
+          <div class="price-box price-box--1">
+            <span class="price-name"> Basic </span>
+            <p class="price-price price-price--1">$0</p>
+            <ul class="price-details">
+              <li>
+                <img src="./assets/Ckechmark-1.svg" alt="check-icon" />100 MB
+                HDD
+              </li>
+              <li>
+                <img src="./assets/Ckechmark-1.svg" alt="check-icon" />1
+                Subdomain
+              </li>
+              <li>
+                <img src="./assets/Ckechmark-1.svg" alt="check-icon" />2 E-mails
+              </li>
+              <li>
+                <img src="./assets/Close.svg" alt="close-icon" />Two years
+                license
+              </li>
+              <li>
+                <img src="./assets/Close.svg" alt="close-icon" />Full support
+              </li>
+            </ul>
+            <a class="price-btn price-btn--1 btn" href="#">Begin</a>
+          </div>
+          <!-- BOX2 -->
+          <div class="price-box price-box--2">
+            <span class="price-name price-name--2"> Professional </span>
+            <p class="price-price price-price--2">$25</p>
+            <p class="price-limited">Limited offer</p>
+            <ul class="price-details">
+              <li>
+                <img src="./assets/Ckechmark-1.svg" alt="check-icon" />500 MB
+                HDD
+              </li>
+              <li>
+                <img src="./assets/Ckechmark-1.svg" alt="check-icon" />2
+                Subdomains
+              </li>
+              <li>
+                <img src="./assets/Ckechmark-1.svg" alt="check-icon" />5 E-mails
+              </li>
+              <li>
+                <img src="./assets/Ckechmark-1.svg" alt="check-icon" />One year
+                license
+              </li>
+              <li>
+                <img src="./assets/Close.svg" alt="close-icon" />Full support
+              </li>
+            </ul>
+            <a class="price-btn price-btn--2 btn" href="#">Begin</a>
+          </div>
+          <!-- BOX3 -->
+          <div class="price-box price-box--3">
+            <span class="price-name"> Premium </span>
+            <p class="price-price price-price--3">$60</p>
+            <p class="price-limited">Limited offer</p>
+            <ul class="price-details">
+              <li>
+                <img src="./assets/Ckechmark-1.svg" alt="check-icon" />2 GB HDD
+              </li>
+              <li>
+                <img src="./assets/Ckechmark-1.svg" alt="check-icon" />5
+                Subdomains
+              </li>
+              <li>
+                <img src="./assets/Ckechmark-1.svg" alt="check-icon" />20
+                E-mails
+              </li>
+              <li>
+                <img src="./assets/Ckechmark-1.svg" alt="check-icon" />Two years
+                license
+              </li>
+              <li>
+                <img src="./assets/Ckechmark-1.svg" alt="check-icon" />Full
+                support
+              </li>
+            </ul>
+            <a class="price-btn price-btn--3 btn" href="#">Begin</a>
+          </div>
+        </div>
+      </section>
+      <!-- CONTACT -->
+      <section class="contact container">
+        <div class="contact-box">
+          <div class="contact-info">
+            <h2 class="contact-header">Any questions?</h2>
+            <p class="contact-paragraph">Leave your email address or call us!</p>
+            <div class="contact-info-icons">
+              <p>
+                <img src="./assets/Mail Icon.svg" alt="mail-icon" />Leave your
+                email address or call us!
+              </p>
+              <p>
+                <img src="./assets/Phone Icon.svg" alt="phone-icon" />Leave your
+                email address or call us!
+              </p>
+            </div>
+          </div>
+          <form class="contact-form" action="submit">
+            <label class="contact-label" for="name">Name</label>
+            <input class="contact-input" type="text" name="name" />
+            <label class="contact-label" for="email">Email</label>
+            <input class="contact-input" type="email" name="email" />
+            <label for="legal-info">
+              <input type="checkbox" name="legal-info" />I hereby give consent
+              for my personal data included in my application to be processed
+              for the purposes of the recruitment process under the European
+              Parliament’s and Council of the European Union Regulation on the
+              Protection of Natural Persons as of 27 April 2016, with regard to
+              the processing of personal data and on the free movement of such
+              data, and repealing Directive 95/46/EC (Data Protection Directive)
+            </label>
+            <button>Send</button>
+          </form>
+        </div>
+      </section>
     </div>
   </body>
 </html>
