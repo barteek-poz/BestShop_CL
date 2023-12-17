@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@300;400;700;800&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./media-queries.css" />
     <title>BestShop</title>
   </head>
   <body>
@@ -117,8 +118,11 @@
         <h2 class="pricing-header">Pricing</h2>
         <div class="pricing-columns container">
           <div class="price-box price-box--1">
-            <span class="price-name"> Basic </span>
-            <p class="price-price price-price--1">$0</p>
+            <div>
+              <span class="price-name"> Basic </span>
+              <p class="price-price price-price--1">$0</p>
+            </div>
+
             <ul class="price-details">
               <li>
                 <img src="./assets/Ckechmark-1.svg" alt="check-icon" />100 MB
@@ -143,9 +147,12 @@
           </div>
           <!-- BOX2 -->
           <div class="price-box price-box--2">
-            <span class="price-name price-name--2"> Professional </span>
-            <p class="price-price price-price--2">$25</p>
-            <p class="price-limited">Limited offer</p>
+            <div>
+              <span class="price-name price-name--2"> Professional </span>
+              <p class="price-price price-price--2">$25</p>
+              <p class="price-limited">Limited offer</p>
+            </div>
+
             <ul class="price-details">
               <li>
                 <img src="./assets/Ckechmark-1.svg" alt="check-icon" />500 MB
@@ -170,9 +177,12 @@
           </div>
           <!-- BOX3 -->
           <div class="price-box price-box--3">
-            <span class="price-name"> Premium </span>
-            <p class="price-price price-price--3">$60</p>
-            <p class="price-limited">Limited offer</p>
+            <div>
+              <span class="price-name"> Premium </span>
+              <p class="price-price price-price--3">$60</p>
+              <p class="price-limited">Limited offer</p>
+            </div>
+
             <ul class="price-details">
               <li>
                 <img src="./assets/Ckechmark-1.svg" alt="check-icon" />2 GB HDD
@@ -218,7 +228,7 @@
               </p>
             </div>
           </div>
-          <form class="contact-form" action="submit">
+          <form class="contact-form" action="">
             <label class="contact-label" for="name">Name</label>
             <input class="contact-input" type="text" name="name" />
             <label class="contact-label" for="email">Email</label>
