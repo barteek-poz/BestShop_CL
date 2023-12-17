@@ -19,6 +19,8 @@
 }
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
+
 }
 body {
   font-family: var(--font-raleway);
@@ -46,12 +48,15 @@ h2 {
   height: 7rem;
 }
 
-.nav-logo {
+.logo {
   font-family: var(--font-raleway);
   text-decoration: none;
   color: var(--color-primary);
-  font-size: 3.2rem;
   font-weight: 300;
+}
+
+.nav-logo {
+  font-size: 3.2rem;
 }
 
 .nav-menu {
@@ -116,7 +121,7 @@ h2 {
   border: 1px solid transparent;
   border-radius: 40px;
   box-shadow: 5px 10px 14px var(--color-primary-shadow);
-  padding: 2.2rem 15.7rem;
+  padding: 2rem 15.7rem;
   transition: 0.3s;
   cursor: pointer;
 }
@@ -481,29 +486,133 @@ h2 {
 }
 
 .contact {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .contact-box {
+  width: 100%;
+  max-width: 90rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  max-width: 90rem;
-  
+  gap: 1.1rem;
+  margin-bottom: 6rem;
 }
 .contact-info {
-    width: 50%;
+  width: 50%;
+  text-align: left;
 }
 .contact-header {
   font-size: 4.9rem;
 }
 .contact-paragraph {
-    font-size: 1.6rem;
-    margin-top: 2.2rem;
-    margin-bottom: 4rem;
+  font-size: 1.6rem;
+  margin-top: 2.2rem;
+  margin-bottom: 4rem;
 }
 .contact-form {
   display: flex;
   flex-direction: column;
   width: 50%;
+}
+.contact-info-icons {
+  display: flex;
+  gap: 2rem;
+}
+.contact-info-icons p {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.6rem;
+  color: var(--color-grey);
+}
+
+.contact-label {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3.28px;
+}
+
+.contact-input {
+  border: none;
+  border-bottom: 1px solid var(--color-grey);
+  margin-bottom: 5rem;
+  margin-top: 2rem;
+  padding: 1rem 0;
+  outline: none;
+  font-size: 1.6rem;
+}
+
+.contact-checkbox {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  appearance: none;
+  border: 1px solid var(--color-grey);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.contact-checkbox:checked {
+  background-image: url("./assets/Checkmark.svg");
+  background-size: 12px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contact-legal {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contact-legal p {
+  font-size: 1.1rem;
+  color: var(--color-grey);
+  line-height: 17px;
+}
+
+.form-btn {
+  align-self: flex-end;
+  background-color: var(--color-primary);
+  padding: 2rem 10rem;
+  margin-top: 2rem;
+}
+
+.form-btn:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.footer {
+  width: 100vw;
+  height: 9rem;
+  box-shadow: 0px -5px 40px #00000029;
+}
+
+.footer-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  font-family: var(--font-raleway);
+  text-decoration: none;
+  color: var(--color-primary);
+  font-size: 2.6rem;
+  font-weight: 300;
+}
+
+.footer-logo-text {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: var(--color-grey);
+}
+
+.media-icons {
+  display: flex;
+  gap: 2rem;
 }

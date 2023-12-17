@@ -17,16 +17,16 @@
       <header class="header">
         <nav class="header-nav">
           <div class="nav-content container">
-            <a href="#" class="nav-logo">BestShop</a>
+            <a href="#" class="nav-logo logo">BestShop</a>
             <ul class="nav-menu">
               <li>
-                <a class="nav-menu-link" href="#about">Why us</a>
+                <a class="nav-menu-link" href="#stats">Why us</a>
               </li>
               <li>
                 <a class="nav-menu-link" href="#benefits">Benefits</a>
               </li>
               <li>
-                <a class="nav-menu-link" href="#prices">Prices</a>
+                <a class="nav-menu-link" href="#pricing">Prices</a>
               </li>
               <li>
                 <a class="nav-menu-link" href="#contact">Contact</a>
@@ -47,7 +47,7 @@
         <img class="hero-img" src="./assets/Background.png" alt="opening-img" />
       </section>
       <!-- STATISTICS -->
-      <section class="stats container">
+      <section class="stats container" id="stats">
         <h2 class="stats-header">The most popular sales platform in country</h2>
         <div class="stats-columns">
           <div class="stats-info">
@@ -68,7 +68,7 @@
         </div>
       </section>
       <!-- BENEFITS -->
-      <section class="benefits">
+      <section class="benefits" id="benefits">
         <div class="benefits-content container">
           <div class="benefit benefit--1">
             <div class="benefit-text">
@@ -113,7 +113,7 @@
         </div>
       </section>
       <!-- PRICING -->
-      <section class="pricing">
+      <section class="pricing" id="pricing">
         <h2 class="pricing-header">Pricing</h2>
         <div class="pricing-columns container">
           <div class="price-box price-box--1">
@@ -199,19 +199,22 @@
         </div>
       </section>
       <!-- CONTACT -->
-      <section class="contact container">
+      <section class="contact container" id="contact">
         <div class="contact-box">
           <div class="contact-info">
             <h2 class="contact-header">Any questions?</h2>
-            <p class="contact-paragraph">Leave your email address or call us!</p>
+            <p class="contact-paragraph">
+              Leave your email address or call us!
+            </p>
             <div class="contact-info-icons">
               <p>
-                <img src="./assets/Mail Icon.svg" alt="mail-icon" />Leave your
-                email address or call us!
+                <img
+                  src="./assets/Mail Icon.svg"
+                  alt="mail-icon" />info@bestshop.xyz
               </p>
               <p>
-                <img src="./assets/Phone Icon.svg" alt="phone-icon" />Leave your
-                email address or call us!
+                <img src="./assets/Phone Icon.svg" alt="phone-icon" />123 456
+                789
               </p>
             </div>
           </div>
@@ -220,19 +223,44 @@
             <input class="contact-input" type="text" name="name" />
             <label class="contact-label" for="email">Email</label>
             <input class="contact-input" type="email" name="email" />
-            <label for="legal-info">
-              <input type="checkbox" name="legal-info" />I hereby give consent
-              for my personal data included in my application to be processed
-              for the purposes of the recruitment process under the European
-              Parliament’s and Council of the European Union Regulation on the
-              Protection of Natural Persons as of 27 April 2016, with regard to
-              the processing of personal data and on the free movement of such
-              data, and repealing Directive 95/46/EC (Data Protection Directive)
+            <label for="legal-info" class="contact-legal">
+              <input
+                type="checkbox"
+                name="legal-info"
+                class="contact-checkbox" />
+              <p>
+                I hereby give consent for my personal data included in my
+                application to be processed for the purposes of the recruitment
+                process under the European Parliament’s and Council of the
+                European Union Regulation on the Protection of Natural Persons
+                as of 27 April 2016, with regard to the processing of personal
+                data and on the free movement of such data, and repealing
+                Directive 95/46/EC (Data Protection Directive)
+              </p>
             </label>
-            <button>Send</button>
+            <button class="btn form-btn">Send</button>
           </form>
         </div>
       </section>
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="footer-content container">
+          <div class="footer-logo-box">
+            <a href="#" class="footer-logo logo">BestShop</a>
+            <p class="footer-logo-text">
+              © 2019 BestShop LTD, All Rights Reserved
+            </p>
+          </div>
+          <div class="media-icons">
+            <a href="#"
+              ><img src="./assets/Twitter.svg" alt="twitter-icon"
+            /></a>
+            <a href="#"
+              ><img src="./assets/Facebook.svg" alt="facebook-icon"
+            /></a>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
