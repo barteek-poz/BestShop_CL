@@ -1,0 +1,72 @@
+.stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-raleway);
+  
+    &-header {
+      margin-top: 10rem;
+      margin-bottom: 10rem;
+    }
+  
+    &-columns {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 18.5rem;
+    }
+    &-img {
+      position: relative;
+      width: 63px;
+      height: 63px;
+      border-radius: 50%;
+    }
+  }
+  
+  .stats-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    margin-bottom: 12rem;
+    max-width: 12rem;
+  
+    &-bold {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 6px;
+    }
+  
+    &-text {
+      font-size: 1.7rem;
+      color: var(--color-grey);
+    }
+    &-img--1 {
+      background-color: var(--color-redish);
+      &::before {
+        content: url("./assets/Person.svg");
+        position: absolute;
+        left: 50%;
+      }
+    }
+    &-img--2 {
+      background-color: var(--color-primary);
+      &::before {
+        content: url("./assets/Eye.svg");
+        position: absolute;
+        left: 30%;
+        top: 20%;
+      }
+    }
+    &-img--3 {
+      background-color: var(--color-green);
+      &::before {
+        content: url("./assets/Catalog.svg");
+        position: absolute;
+        left: 50%;
+        top: 10%;
+      }
+    }
+  }

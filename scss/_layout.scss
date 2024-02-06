@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+  }
+  body {
+    font-family: var(--font-raleway);
+    font-family: var(--font-open-sans);
+  }
+  
+  h2 {
+    font-family: var(--font-raleway);
+    font-size: 3.6rem;
+    font-weight: 400;
+  }
+  
+  .container {
+    max-width: 135.2rem;
+    margin: 0 auto;
+  }

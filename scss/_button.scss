@@ -1,0 +1,14 @@
+.btn {
+    display: block;
+    font-size: 1.6rem;
+    font-family: var(--font-open-sans);
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--color-white);
+    border: 1px solid transparent;
+    border-radius: 40px;
+    box-shadow: 5px 10px 14px var(--color-primary-shadow);
+    padding: 2rem 15.7rem;
+    transition: 0.3s;
+    cursor: pointer;
+  }

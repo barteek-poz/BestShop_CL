@@ -1,0 +1,120 @@
+.pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rem;
+    margin-bottom: 15rem;
+  
+    &-header {
+      margin-bottom: 7rem;
+    }
+    &-columns {
+      display: flex;
+      gap: 6rem;
+    }
+  }
+  
+  .price {
+    &-box {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border: 1px solid transparent;
+      border-radius: 18px;
+      width: 37.2rem;
+      padding-top: 3.5rem;
+  
+      &--1 {
+        border-color: var(--color-redish);
+      }
+  
+      &--2 {
+        border-color: var(--color-primary);
+        transform: scale(1.1);
+        box-shadow: 5px 10px 27px var(--color-primary-shadow);
+      }
+      &--3 {
+        border-color: var(--color-green);
+      }
+    }
+  
+    &-name {
+      font-family: var(--font-raleway);
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  
+    &-value {
+      font-weight: 300;
+      font-size: 4.6rem;
+      margin-top: 1.4rem;
+      margin-bottom: 7rem;
+  
+      &--1 {
+        color: var(--color-redish);
+      }
+      &--2 {
+        color: var(--color-primary);
+        margin-bottom: 0.5rem;
+      }
+      &--3 {
+        color: var(--color-green);
+        margin-bottom: 0.5rem;
+      }
+    }
+    &-details {
+      list-style: none;
+      font-size: 1.4rem;
+      margin-bottom: 8rem;
+      text-align: center;
+      li {
+        margin-bottom: 2rem;
+      }
+      img {
+        margin-right: 1.4rem;
+      }
+    }
+    &-btn {
+      position: absolute;
+      top: 100%;
+      transform: translate(0, -50%);
+      padding: 1.6rem 5.7rem;
+  
+      &--1 {
+        background-color: var(--color-redish);
+        &:hover,
+        &:active {
+          background-color: var(--color-white);
+          color: var(--color-redish);
+          border-color: var(--color-redish);
+        }
+      }
+  
+      &--2 {
+        background-color: var(--color-primary);
+        &:hover,
+        &:active {
+          background-color: var(--color-white);
+          color: var(--color-primary);
+          border-color: var(--color-primary);
+        }
+      }
+      &--3 {
+        background-color: var(--color-green);
+        &:hover,
+        &:active {
+          background-color: var(--color-white);
+          color: var(--color-green);
+          border-color: var(--color-green);
+        }
+      }
+    }
+    &-limited {
+      font-family: var(--font-raleway);
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 6rem;
+    }
+  }
