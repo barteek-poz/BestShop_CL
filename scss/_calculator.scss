@@ -1,6 +1,7 @@
 .calc {
   padding: 80px 0;
   background-color: var(--color-light-grey);
+  font-size: 1.6rem;
 
   h2 {
     text-align: center;
@@ -25,7 +26,7 @@
     border: 1px solid var(--color-primary);
     padding: 11px 20px;
     line-height: 1em;
-    font-size: 0.8125rem;
+    font-size: 1.6rem;
     box-shadow: 0px 3px 6px var(--color-primary-shadow);
     margin-bottom: 20px;
     background-color: var(--color-white);
@@ -41,6 +42,7 @@
 
   &__select {
     position: relative;
+    font-size: 1.6rem;
 
     .select__input {
       position: relative;
@@ -113,7 +115,7 @@
       justify-content: space-between;
       align-items: center;
       color: var(--color-white);
-      font-size: 0.875rem;
+      font-size: 1.6rem;
       display: none;
 
       &.open {
@@ -129,7 +131,7 @@
       background-color: var(--color-primary);
 
       .total__price {
-        font-size: 1.25rem;
+        font-size: 1.6rem;
         font-weight: 700;
       }
     }
@@ -142,7 +144,7 @@
       .item {
         &__price {
           font-weight: 700;
-          font-size: 1.125rem;
+          font-size: 1.6rem;
         }
       }
     }

@@ -15,6 +15,7 @@ const packageSum = document.querySelector('[data-id="package"]');
 const accountSum = document.querySelector('[data-id="accounting"]');
 const terminalSum = document.querySelector('[data-id="terminal"]');
 const totalSum = document.querySelector(".summary__total");
+const totalPrice = document.querySelector(".total__price");
 
 //INPUT HANDLERS
 const prices = {
@@ -27,22 +28,24 @@ const prices = {
   terminal: 5,
 };
 
-//dokonczyc sumowanie z reducerem w sumTotalHandler
 const sumArr = [
   {
     product: 0,
     order: 0,
+    package: 0,
+    accounting: 0,
+    terminal: 0,
   },
 ];
 
 const sumHandler = (inputType, sumCategory, priceCategory) => {
   sumCategory.classList.add("open");
-  sumCategory.children[1].innerText = `${inputType.value} * ${prices[priceCategory]}`;
+  sumCategory.children[1].innerText = `${inputType.value} * ${prices[priceCategory]}$`;
   sumCategory.children[2].innerText = `${
     inputType.value * prices[priceCategory]
   }$`;
   sumArr[0][`${priceCategory}`] = inputType.value * prices[priceCategory];
-  totalSumHandler(priceCategory);
+  totalSumHandler();
   if (inputType.value.length === 0 && sumCategory.classList.contains("open")) {
     sumCategory.classList.remove("open");
   }
@@ -64,8 +67,9 @@ const selectOptionHandler = (e) => {
   const packageType = e.target.getAttribute("data-value");
   selectInput.innerText = e.target.innerText;
   packageSum.children[1].innerText = e.target.innerText;
-  console.log(e.target.getAttribute("data-value"));
   packageSum.children[2].innerText = `${prices[`${packageType}`]}$`;
+  sumArr[0].package = prices[`${packageType}`];
+  totalSumHandler();
   packageSum.classList.add("open");
 };
 
@@ -73,30 +77,46 @@ selectPackage.addEventListener("click", selectHandler);
 selectDropdown.addEventListener("click", selectOptionHandler);
 
 //CHECKBOX HANDLERS
-const checkboxHandler = (e) => {
-  if (e.target.getAttribute("id") === "accounting") {
-    accountSum.classList.toggle("open");
-    accountSum.children[1].innerText = `${
+
+const checkboxHandler = (e, checkboxType, checkboxName) => {
+  if (e.target.checked) {
+    checkboxType.classList.add("open");
+    checkboxType.children[1].innerText = `${
       prices[`${e.target.getAttribute("id")}`]
     }$`;
+    sumArr[0][`${checkboxName}`] = prices[`${checkboxName}`];
+    totalSumHandler();
   } else {
-    terminalSum.classList.toggle("open");
-    terminalSum.children[1].innerText = `${
-      prices[`${e.target.getAttribute("id")}`]
-    }$`;
+    checkboxType.classList.remove("open");
+    sumArr[0][`${checkboxName}`] = 0;
+    totalSumHandler();
   }
 };
 
-accountInput.addEventListener("change", checkboxHandler);
-terminalInput.addEventListener("change", checkboxHandler);
+accountInput.addEventListener("change", (e) => {
+  checkboxHandler(e, accountSum, "accounting");
+});
+terminalInput.addEventListener("change", (e) => {
+  checkboxHandler(e, terminalSum, "terminal");
+});
 
 //TOTAL SUM
-
-const totalSumHandler = (category) => {
-  const sum = sumArr.reduce((acc, currVal) => {
-    return acc + currVal[`${category}`];
-  }, 0);
-  console.log(sum);
+const totalSumHandler = () => {
+  let totalProductsPrice =
+    sumArr[0].product +
+    sumArr[0].order +
+    sumArr[0].package +
+    sumArr[0].accounting +
+    sumArr[0].terminal;
+    if(totalProductsPrice !== 0) {
+      totalSum.classList.add("open");
+      totalPrice.innerText = `${totalProductsPrice}$`;
+    }
+    else {
+      totalSum.classList.remove("open");
+    }
+  
+  console.log(totalProductsPrice);
 };
 
 // MOBILE NAVIGATION
