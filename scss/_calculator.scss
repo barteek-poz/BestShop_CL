@@ -48,7 +48,6 @@
       position: relative;
       height: 40px;
       vertical-align: middle;
-      padding: 13px 20px;
       cursor: pointer;
 
       &::after {
@@ -97,8 +96,24 @@
 
   .form__checkbox {
     display: flex;
-    .consent__text {
-      padding-top: 4px;
+    align-items: center;
+    gap: 4px;
+    margin-top: 8px;
+    color: var(--color-grey);
+    input {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      appearance: none;
+      border: 1px solid var(--color-grey);
+      border-radius: 4px;
+      cursor: pointer;
+      &:checked {
+        background-image: url("../assets/Checkmark.svg");
+        background-size: 12px;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
     }
   }
 

@@ -38,24 +38,27 @@ const sumArr = [
   },
 ];
 
-const sumHandler = (inputType, sumCategory, priceCategory) => {
-  sumCategory.classList.add("open");
-  sumCategory.children[1].innerText = `${inputType.value} * ${prices[priceCategory]}$`;
-  sumCategory.children[2].innerText = `${
-    inputType.value * prices[priceCategory]
-  }$`;
-  sumArr[0][`${priceCategory}`] = inputType.value * prices[priceCategory];
-  totalSumHandler();
+const inputSumHandler = (inputType, sumCategory, priceCategory) => {
+  if (inputType.value >= 0 && Number.isInteger(+inputType.value)) {
+    sumCategory.classList.add("open");
+    sumCategory.children[1].innerText = `${inputType.value} * ${prices[priceCategory]}$`;
+    sumCategory.children[2].innerText = `${
+      inputType.value * prices[priceCategory]
+    }$`;
+    sumArr[0][`${priceCategory}`] = inputType.value * prices[priceCategory];
+    totalSumHandler();
+  }
+
   if (inputType.value.length === 0 && sumCategory.classList.contains("open")) {
     sumCategory.classList.remove("open");
   }
 };
 
 productsInput.addEventListener("input", () => {
-  sumHandler(productsInput, productsSum, "product");
+  inputSumHandler(productsInput, productsSum, "product");
 });
 ordersInput.addEventListener("input", () => {
-  sumHandler(ordersInput, ordersSum, "order");
+  inputSumHandler(ordersInput, ordersSum, "order");
 });
 
 //SELECT HANDLERS
@@ -108,14 +111,13 @@ const totalSumHandler = () => {
     sumArr[0].package +
     sumArr[0].accounting +
     sumArr[0].terminal;
-    if(totalProductsPrice !== 0) {
-      totalSum.classList.add("open");
-      totalPrice.innerText = `${totalProductsPrice}$`;
-    }
-    else {
-      totalSum.classList.remove("open");
-    }
-  
+  if (totalProductsPrice !== 0) {
+    totalSum.classList.add("open");
+    totalPrice.innerText = `${totalProductsPrice}$`;
+  } else {
+    totalSum.classList.remove("open");
+  }
+
   console.log(totalProductsPrice);
 };
 

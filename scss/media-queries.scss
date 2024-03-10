@@ -167,6 +167,25 @@
   .burger {
     display: flex;
   }
+
+  .calc {
+    padding: 30px 15px;
+
+    &__columns {
+      display: block;
+    }
+
+    &__form {
+      width: 100%;
+      margin-right: 0;
+    }
+
+    &__summary {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 30px;
+    }
+  }
 }
 
 /* 600px */
